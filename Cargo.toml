@@ -1,0 +1,24 @@
+[package]
+name = "zed-wakatime"
+version.workspace = true
+edition = "2021"
+
+[dependencies]
+zed_extension_api = "0.6.0"
+
+[lib]
+name = "zed_wakatime"
+crate-type = ["cdylib"]
+
+[workspace]
+members = ["wakatime-ls"]
+
+[workspace.package]
+version = "0.1.9"
+
+[profile.dist]
+inherits = "release"
+lto = "thin"
+
+[package.metadata.dist]
+dist = false
