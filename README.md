@@ -4,28 +4,19 @@ A [WakaTime](https://wakatime.com/) extension for [Zed](https://zed.dev/), modif
 
 Uses the [wakatime-ls](https://github.com/wakatime/zed-wakatime/tree/master/wakatime-ls) to receive edit events from Zed and send heartbeats to WakaTime/Hackatime by [wakatime-cli](https://github.com/wakatime/wakatime-cli).
 
-## Building from Source
+## Installation
 
 1. Clone this repository:
 ```bash
 git clone https://github.com/Sebastian-Alexis/zed-hackatime.git
-cd zed-hackatime
 ```
 
-2. Build the extension:
-```bash
-cargo build --release
-```
-
-3. The built extension will be at `target/wasm32-wasi/release/zed_wakatime.wasm`
-
-## Loading into Zed
-
-1. Open Zed
-2. Open the command palette (Cmd+Shift+P on macOS)
-3. Run "zed: install dev extension"
-4. Select the directory containing this repository
-5. The extension will be loaded and ready to use
+2. Install the extension in Zed:
+   - Open Zed
+   - Open the command palette (Cmd+Shift+P on macOS)
+   - Run "zed: install dev extension"
+   - Select the cloned `zed-hackatime` directory
+   - Zed will automatically build and install the extension
 
 ## Configuration
 In order to authenticate with the wakatime-cli, the language server needs to know your API token.
